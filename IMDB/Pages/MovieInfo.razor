@@ -1,0 +1,78 @@
+﻿@page "/MovieInfo/"
+
+@inject IJSRuntime JS
+<h3>MovieInfo</h3>
+
+
+<div class="container">
+        <div class="poster">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/3/3e/Sex_Education.jpg" alt="">
+        </div>
+        <div class="info">
+            <div class="movie-title">
+                Sex Education
+            </div>
+            <div class="raiting">
+                5.5/10
+            </div>
+            <div class="movie-detail">
+                <div class="set">
+                    <label >Release Date</label>
+                    <span>January 11, 2019</span>
+                </div>
+                <div class="set">
+                    <label >Running time</label>
+                    <span>50-60 Min</span>
+                </div>
+                <div class="set">
+                    <label >Gener</label>
+                    <span>Comedy / Adventure / Family</span>
+                </div>
+            </div>
+            <div class="movie-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro ducimus, veritatis quasi sint atque nostrum necessitatibus nisi distinctio optio, suscipit libero, est modi facilis eaque quam vitae tempora perspiciatis?
+
+            </div>
+            <div class="movie-cast">
+                <div class="header">Actors</div>
+                <div class="list">
+                    <div class="cast">
+                        <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTMLx5ttH5r2WwlwvrzGcfcF1bx1bmytve7pB46OttuEqBcbU_f2JMwN2ojS4SH" alt="">
+                        <label>Emma Mackey</label>
+                    </div>
+                    <div class="cast">
+                        <img src="https://www.film.ru/sites/default/files/people/1569014-1151764.jpg" alt="">
+                        <label>Asa Butterfield</label>
+                    </div>
+                    <div class="cast">
+                        <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcRNBfWE4bkFHm6D2IcU_vzExyRGH52XBodSKl-hkJwUC0Lm3K2IxEi-zZvqSzIo" alt="">
+                        <label>Ncuti Gatwa</label>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="play" onclick="toggle();"><img src="E:\OpenServer\domains\IMDB\img\movie" alt="">Watch Trailer</a>
+            <div class="trailer">
+                <video src="img/movie/sexeducation.mp4" controls="true"></video>
+                 <img class="close" src="E:\OpenServer\domains\IMDB\img\movie\close.png" onclick="toggle();">
+             </div>
+        </div>
+        
+    </div>
+    <div class="reviews">
+        <h2>Отзывы</h2>
+        
+        <div class="container_review">
+            <div class="movie__average">5</div>
+            <div><span>Chris Fox.</span> </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis neque eum nam inventore reiciendis! Aliquam harum reprehenderit rem quas esse quam nulla. Vel laudantium veniam ad, consequatur optio excepturi eos.. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel beatae consequatur corrupti omnis quia velit quaerat voluptatem quasi nihil assumenda perferendis at adipisci sunt maiores, iure eius ullam earum ratione.</div>
+        </div>
+
+        <div class="container_review">
+            <div class="movie__average">10</div>
+            <div><span>Rebecca Flex.</span></div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur assumenda a iusto atque aut nihil veritatis, modi quae facilis, dolorem repellendus, vitae laudantium doloremque impedit dolore expedita odit ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab assumenda sapiente atque et, veritatis rem dicta magni quis quaerat cupiditate fugiat at qui numquam ducimus esse deserunt! Eum, optio?</div>
+        </div>
+    </div>
+@code {
+        
+}

@@ -1,0 +1,115 @@
+@page "/"
+
+@inject IJSRuntime JSRuntime; 
+<div class="container-lighttheme">
+     <section id="main">
+                <!-- showcase -->
+                <!-- heading -->
+                @* <h1 class="showcase-heading">Новинки</h1> *@
+                @* *@
+                @* <ul id="autoWidth" class="cs-hidden"> *@
+                @*     <!-- box1 --> *@
+                @*     <li class="item-a item" id="#current"> *@
+                @*         <div class="showcase-box"> *@
+                @*             <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/05/MONEY-HEIST-SEASON-5.jpg" *@
+                @*                 alt=""> *@
+                @*             <div class="prompt"> *@
+                @*                 <p>Money Heist</p> *@
+                @*             </div> *@
+                @*         </div> *@
+                @* *@
+                @*     </li> *@
+                @*     <li class="item-b"> *@
+                @*         <div class="showcase-box"> *@
+                @*             <img src="https://cdn.igromania.ru/mnt/articles/6/6/3/a/a/1/31827/preview/f43c9681d6cce263_1920xH.jpg" *@
+                @*                 alt=""> *@
+                @*         </div> *@
+                @*     </li> *@
+                @*     <li class="item-c"> *@
+                @*         <div class="showcase-box"> *@
+                @*             <img src="https://cdn.igromania.ru/mnt/articles/6/1/3/a/4/e/31841/preview/7525ec71848ea5f6_1920xH.jpg" *@
+                @*                 alt=""> *@
+                @*         </div> *@
+                @*     </li> *@
+                @*     <li class="item-d"> *@
+                @*         <div class="showcase-box"> *@
+                @*             <img src="http://geekcity.ru/wp-content/uploads/2021/07/Marvel-Black-Widow-review.jpg" alt=""> *@
+                @*         </div> *@
+                @*     </li> *@
+                @*     <li class="item-e"> *@
+                @*         <div class="showcase-box"> *@
+                @*             <img src="https://avatars.mds.yandex.net/get-ott/236744/2a0000017b14b28fa59f73e76ae7f85fe761/678x380" *@
+                @*                  alt=""> *@
+                @*         </div> *@
+                @*         </li> *@
+                @* </ul> *@
+
+            </section>
+            <!-- Movies -->
+            <div class="container">
+               
+                <div class="movies">
+                   
+                    <div class="movie">
+                          <NavLink href="MovieInfo">
+                        <div class="movie__cover-inner">
+                            <img src="https://upload.wikimedia.org/wikipedia/ru/3/3e/Sex_Education.jpg" alt=""
+                                 class="movie__cover">
+                            <div class="movie__cover--darkened"></div>
+                        </div>
+                          </NavLink>
+                        <div class="movie__info">
+                            <div class="movie__title">Sex Education</div>
+                            <div class="movie__category">Комедия</div>
+                            <div class="movie__average movie__average--green" id="rate">9.8</div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <!-- Footer -->
+                <footer>
+                    <div class="container">
+                        <div class="social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                        <ul class="list">
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">Services</a>
+                            </li>
+                            <li>
+                                <a href="">About</a>
+                            </li>
+                            <li>
+                                <a href="">Terms</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                        </ul>
+                        <p class="copyright">
+                            IMDB 2021
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+@code{
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+
+            await JSRuntime.InvokeAsync<object>("toggle");
+            firstRender = false;
+        }
+    }
+
+}
+      

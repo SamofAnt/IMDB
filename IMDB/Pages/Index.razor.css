@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1a191f;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+#main{
+    padding-top: 50px;
+    margin-left: 70px;
+}
+.showcase-box{
+    position: relative;
+    width: 430px;
+    height: 250px;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin: 0px 20px 10px 20px;
+    overflow: hidden;
+}
+
+.showcase-box img{
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.showcase-heading{
+    padding-left: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #fff;
+    padding-bottom: 20px;
+
+}
+/* Dark Theme */
+
+
+/* Movies */
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie{
+    width: 240px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+}
+.movie:hover{
+    top: -10px;
+    left: -5px;
+}
+.movie__cover-inner{
+    position: relative;
+    height: 360px;
+}
+
+.movie__cover{
+    max-width: 100%;
+    height: 100%;
+}
+
+.movie__cover--darkened{
+    background-color: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all .1s linear;
+}
+.movie__cover--darkened:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+.movie__info{
+    padding: 10px 10px;
+}
+
+.movie__title{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+.movie__category{
+    font-size: 14px;
+    color: #ffd80e;
+    text-decoration: none;
+}
+.movie__average{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right:0;
+    border-radius: 50%;
+    width: 36px;
+    overflow: hidden;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a191f;
+    color: #fff;
+    font-size: 14px;
+}
+
+.movie__average--green{
+    border: 1px solid green;
+}
+
+.movie__average--orange{
+    border: 1px solid orange;
+}
+.movie__average--red{
+    border: 1px solid red;
+}
+.movie__average--green::after{
+    content: "";
+    position:absolute;
+    bottom: 85%;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    box-shadow: 0 0 20px #03bc03;
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+.movie__average--orange::after{
+    content: "";
+    position:absolute;
+    bottom: 55%;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    box-shadow: 0 0 20px #FF8C00;
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+
+.movie__average--red::after{
+    content: "";
+    position:absolute;
+    bottom: 35%;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    box-shadow: 0 0 20px #DC143C;
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Footer */
+
+footer{
+    padding: 80px 0;
+    background-color: inherit;
+
+}
+
+.social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #ccc;
+
+}
+.social a{
+    font-size: 24px;
+    color:inherit;
+    border: 1px solid #4b4c4d;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.social a:hover{
+    opacity: 0.9;
+}
+footer ul{
+    margin-top:0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+
+}
+footer ul a {
+    color:#ccc;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+footer ul li a:hover{
+    opacity: 1;
+}
+.copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}

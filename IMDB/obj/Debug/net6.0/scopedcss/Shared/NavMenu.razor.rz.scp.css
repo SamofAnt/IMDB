@@ -1,0 +1,64 @@
+.navbar-toggler[b-r2kjn6hwdo] {
+    background-color: #1a191f;
+}
+
+.top-row[b-r2kjn6hwdo] {
+    height: 3.5rem;
+    background-color: #1a191f;
+}
+
+.navbar-brand[b-r2kjn6hwdo] {
+    font-size: 32px;
+    text-decoration: none;
+    color: #c6cacc;
+}
+
+.oi[b-r2kjn6hwdo] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-r2kjn6hwdo] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-r2kjn6hwdo] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-r2kjn6hwdo] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-r2kjn6hwdo]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-r2kjn6hwdo]  a.active {
+    background-color:#1a191f;
+    color: white;
+}
+
+.nav-item[b-r2kjn6hwdo]  a:hover {
+    background-color: #1a191f;
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-r2kjn6hwdo] {
+        display: none;
+    }
+
+    .collapse[b-r2kjn6hwdo] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
